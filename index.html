@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FlexBox Project</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+  <link rel="stylesheet" type="text/css" href="css/styles.css">     
+</head>
+
+<body>
+<nav class="flex-nav">
+        <ul>
+          <li class="showing"><a href="https://giphy.com/">GIPHY Site</a></li>
+          <li class="hidden"><a href="https://codepen.io/gungorbudak/pen/ooKNpz">Other</a></li>
+          <li class="hidden"><a href="#">About</a></li>
+          <li class="showing"><a href="#">Contact Us</a></li>
+          <li class="hidden"><a href="#">Login</a></li>
+          <li class="hidden" ><a href="#">Register</a></li>
+          <li class="social">
+            <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="social">
+            <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="social">
+            <a href="http://github.com/"><i class="fa fa-github"></i></a>
+          </li>
+          <li class="social">
+            <a href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+          </li>
+        </ul>
+</nav>
+
+
+  <h1 style="text-align: center;" class="jumbotron">GIPHY Search</h1>
+  <div class="content">
+    <div>
+      <p class="job text-center">Project 02 Texas A&M BootCamp</p>
+      <hr class="hr">  
+      <div id="searchbtns" class="text-center"></div>   <!-- container for the dynamically inserted search button-keywords -->
+      <div class="input-group searchform">           
+      <input type="text" id="searchcount" name="searchcount" class="form-control"  placeholder="Enter Search Count"/>     
+      <input type="text" id="searchtext" name="searchtext" class="form-control" placeholder="Enter any search word or click any button above"/>
+      <div class="input-group-append">
+        <button id="searchBtn" class="btn btn-primary mb-2" type="button">
+          <i class="fa fa-search"> &nbsp Search</i>
+        </button>
+      </div>  
+    </div>
+
+    <div>
+      <input type="text"/>
+    </div>
+    <p class="mt-4 btn-success text-center"><a href="https://giphy.com/">Check out the GIPHY Developers Site</a></p>
+    <hr>
+    <div id="results"></div>
+    <div id="results2"></div>  
+</div>
+</div>
+<div>  
+  <div class="panel panel-default">
+    <div class="panel-heading"></div>
+    <div class="panel-body text-center btn-primary"><h3>Powered By GIPHY</h3></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+<script src="js/script.js"></script>
+</body>
+</html>
+
