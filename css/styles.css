@@ -1,0 +1,245 @@
+/* 1. Base */
+
+html {
+  background-color: #5f45bb; 
+  background-image: linear-gradient(to bottom right, #180cac, #d054e4);
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;   
+}
+
+a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:black;
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
+
+a:hover {
+  background:rgba(0,0,0,0.3);
+}
+
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding:50px;
+}
+
+
+.flex-nav ul {
+  border:1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+
+
+.flex-nav li {
+  flex:3;
+}
+
+.flex-nav .social {
+  flex:1;
+}
+
+
+@media all and (max-width:1000px) {
+  
+  .flex-nav ul {
+    flex-wrap:wrap;
+  }
+
+  .flex-nav li {
+    flex:1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex:1 1 25%;
+  }  
+}
+
+@media all and (max-width:500px) {    
+  .flex-nav li {
+    flex-basis:100%;
+  }  
+}
+
+.picture-shadow,
+.picture-image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: scale-down; /* this ensures correct aspect-ratio for the image : other values are: cover, contain, */
+}
+
+
+.job,
+.button {
+  font-family: "Montserrat", "Quicksand", sans-serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+
+.picture {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+
+.picture-shadow {
+  border-radius: 290486px;
+  background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+  position: absolute;
+  top: 10%;
+}
+
+.picture-imageCIRCLEBOX{
+  border-radius: 290453px; 
+  position: absolute;
+  flex: 1 1 25%;
+}
+
+.picture-image {
+  border-radius: 59px;
+  position: absolute;
+  flex: 1 1 25%;
+}
+
+.about {
+  max-width: 26rem;
+  min-width: 26rem;
+}
+
+.name {
+  font-size: 2.25rem;
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  color:black;
+  font-weight: bold;
+}
+
+.job {
+  color: #598859;
+  font-size: 0.75rem;
+}
+
+.hr {
+  background-color: #ff470f;
+  border: none;
+  content: "";
+  height: 2px;
+  margin-bottom: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+
+.searchform {
+  width: 50%;
+  margin: 50px auto;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+
+
+.my-select {
+  background-color: #DABCAA;
+  color: #5F6162;
+  border: red 3px solid;
+  border-radius: 2px;
+  padding: 6px 20px;
+}
+
+/* 4. Responsiveness */
+
+@media screen and (max-width: 799px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 3rem;
+  }
+
+  .side {
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:799px) {
+    .hidden {
+             display: none;
+         }
+    }
+
+
+
