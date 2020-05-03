@@ -25,12 +25,6 @@ body {
   margin: 0;   
 }
 
-/* this ensures that text size will scale when window is zoomed */ 
-h1, h2, h3{
-	font-size: cal(1.5rem + 3vw); 
-}
-
-
 a {
   color:white;
   font-weight: 100;
@@ -55,6 +49,11 @@ a:hover {
   padding:50px;
 }
 
+.content, .flex-container {
+  min-width:320px;  /* force window to stop resizing when width < 320px */
+  width: auto !important;
+  width:900px;
+}
 
 .flex-nav ul {
   border:1px solid black;
@@ -169,7 +168,9 @@ a:hover {
   margin-top: 1.5rem;
 }
 
-
+h1,h2{
+	font-size: cal(1.5rem + 3vw); /* this ensures that text size will scale when window is zoomed */ 
+}
 .searchform {
   width: 50%;
   margin: 50px auto;
@@ -241,11 +242,23 @@ a:hover {
   }
 }
 
+.banner{		
+	width: calc(100% - 0px);   /* use width of parent minus 0px    */
+	border: solid black 2px;
+	box-shadow: 1px 2px;
+	background-color: plum;
+	padding: 6px;
+	text-align: center;
+	box-sizing: border-box;	
+}
+
 @media screen and (max-width:799px) {
     .hidden {
              display: none;
          }
     }
+
+
 
 
 
