@@ -72,7 +72,7 @@ $(document).ready(function() {
   
    function wireupUpSearchBtnClick() {      
      $("#searchBtn").on("click", function(){
-      if ($("#searchtext").val() == ""){              
+      if ($("#searchtext").val() === ""){              
         $("#searchtext").val("space");
       }  
       let searchValue = $("#searchtext").val();                   
