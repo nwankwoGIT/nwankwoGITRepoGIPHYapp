@@ -57,8 +57,9 @@ $(document).ready(function() {
   
  
  function wireupUpSearchTextBtnsClick() {
-     $(".search-btn").on("click", function(e){          
-       $("#searchtext").val($(this).val());
+     $(".search-btn").on("click", function(e){  
+           
+      $("#searchtext").val($(this).val());
        if ($("#searchtext").val() == 'stickers'){              
          SearchStickers();
        }
@@ -71,7 +72,10 @@ $(document).ready(function() {
   
    function wireupUpSearchBtnClick() {      
      $("#searchBtn").on("click", function(){
-       let searchValue = $("#searchtext").val();                   
+      if ($("#searchtext").val() == ""){              
+        $("#searchtext").val("space");
+      }  
+      let searchValue = $("#searchtext").val();                   
        if (searchValue.toLowerCase() === 'stickers'){              
          SearchStickers();
        }
