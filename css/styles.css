@@ -25,6 +25,12 @@ body {
   margin: 0;   
 }
 
+/* this ensures that text size will scale when window is zoomed */ 
+h1, h2, h3{
+	font-size: cal(1.5rem + 3vw); 
+}
+
+
 a {
   color:white;
   font-weight: 100;
