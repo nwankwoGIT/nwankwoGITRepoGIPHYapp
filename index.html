@@ -12,11 +12,11 @@
 <nav class="flex-nav">
         <ul>
           <li class="showing"><a href="https://giphy.com/">GIPHY Site</a></li>
-          <li class="hidden"><a href="https://codepen.io/gungorbudak/pen/ooKNpz">Other</a></li>
-          <li class="hidden"><a href="#">About</a></li>
-          <li class="showing"><a href="#">Contact Us</a></li>
-          <li class="hidden"><a href="#">Login</a></li>
-          <li class="hidden" ><a href="#">Register</a></li>
+          <li class="hidden"><a href="https://codepen.io/gungorbudak/pen/ooKNpz">Other</a></li>   
+          <li class="hidden"><a href="#" data-toggle="modal" data-target="#exampleModal">About</a></li>
+          <li class="hidden"><a href="#" data-toggle="modal" data-target="#exampleModal">Contact Us</a></li>          
+          <li class="hidden"><a href="#" data-toggle="modal" data-target="#exampleModal">Login</a></li>
+          <li class="hidden"><a href="#" data-toggle="modal" data-target="#exampleModal">Register</a></li>
           <li class="social">
             <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
           </li>
@@ -36,8 +36,8 @@
   <h1 style="text-align: center;" class="jumbotron">GIPHY Search</h1>
   <div class="content">
     <div>
-      <h2 class="job text-center">Project 02 Texas A&M BootCamp</h2>
-      <hr class="hr">  
+      <h2 style="color:black;font-weight: bolder;" class="job text-center">Project 02 Texas A&M BootCamp</h2>
+      <hr style="background-color: green;border-width: 5px;"> 
       <div id="searchbtns" class="text-center"></div>   <!-- container for the dynamically inserted search button-keywords -->
       <div class="input-group searchform">           
       <input type="text" id="searchcount" name="searchcount" class="form-control"  placeholder="Enter rows of images to Fetch (max=6 rows of 6 each)"/>     
@@ -47,9 +47,8 @@
           <i class="fa fa-search"> &nbsp Search</i>
         </button>
       </div>  
-    </div>    
-    <p class="mt-4 btn-success text-center banner"><a href="https://giphy.com/">Check out the GIPHY Developers Site</a></p> 
-    <hr>
+    </div>       
+    <hr style="background-color: brown;border-width: 5px;">
     <div id="results"></div>
     <div id="results2"></div>  
 </div>
@@ -60,6 +59,36 @@
     <div class="panel-body text-center btn-primary banner"><h3>Powered By GIPHY</h3></div>
   </div>
 </div>
+<!-- modal message -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sorry, this module is still under development</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+  <footer>     
+      <div class="container" id="Disclaimer">
+        <p class="text-center">
+        &copy; www.kelecitex.com
+        </p>
+          </div>
+    </footer>  
+  </div>         
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
 <script src="js/script.js"></script>
