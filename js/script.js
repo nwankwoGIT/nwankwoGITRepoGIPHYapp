@@ -1,7 +1,7 @@
 $(document).ready(function() {    
     var searchValue = "emoji";
     // show example Search values as buttons
-   const topics = ["Internet Cats", "Meme's", "Trump","Putin","boobs","ryan+gosling", "sunset","Typing", "Space", 
+   const topics = ["Internet Cats", "Meme's", "Trump","Putin","emoji","ryan+gosling", "sunset","Typing", "Space", 
                    "Rick and Morty", "pope", "dogs", "cats", "cities", "corona", "trending", "random", "stickers"];
  
    function addSearchBtns() {
@@ -19,10 +19,14 @@ $(document).ready(function() {
       var event = jQuery.Event( "click" );      
         $( "#searchBtn" ).trigger( event );
         if ( event.isDefaultPrevented() ) {
-           return e.preventDefault(); // stops any further actions           
+           return event.preventDefault(); // stops any further actions           
         }         
+         break;  
+      case 27: 
+         $("#searchtext").val("");
+         $("#searchcount").val("");
          break;
-      default:     
+      default: break;
      }
   });   
   function createMarkup(id) {
@@ -78,7 +82,8 @@ $(document).ready(function() {
    }
       
   function getData (searchstr){
-     let maxcount = $("#searchcount").val() ? $("#searchcount").val() : 1; 
+     let maxcount = parseInt($("#searchcount").val());
+     maxcount = isNaN(maxcount) ? 1 : maxcount;    
      if (maxcount > 6 ) {
          maxcount = 6;
      }
@@ -100,8 +105,12 @@ $(document).ready(function() {
    }).catch(err => alert(err));
   }
  
-  function getStickers (){
-     let maxcount = 6;
+  function getStickers (){    
+     let maxcount = parseInt($("#searchcount").val());
+     maxcount = isNaN(maxcount) ? 1 : maxcount;        
+     if (maxcount > 6 ) {
+         maxcount = 6;
+     }
      let apiKey= 'pvDngRPumUCm81fZop5tnXvRN7YBWFM7'
      let searchvalue = 'random'    
      let giphyAPI = `https://api.giphy.com/v1/stickers/search?q=${searchvalue}&api_key=${apiKey}&limit=${maxcount*6}`;    
