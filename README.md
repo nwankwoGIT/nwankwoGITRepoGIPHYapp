@@ -23,7 +23,7 @@ The goal of this project is to build out a Giphy search engine that:
 The tecnologies used for the project are:
 
 * Flexbox CSS
-* Media queries CSS
+* Media queries CSS (was used to hide some menu items on small devices)
 * Bootstrap 4
 * JQuery JavaScript
 * HTML5
@@ -39,11 +39,11 @@ The Technical requirements:
 
 Other custom implementations:
 
-I added an option to trigger the search by pressing the ENTER Key
+I added an option to trigger the search by pressing the ENTER Key - it uses the default search keyword set in the code
 I created short-cut array of buttons with search keys as labels. This saves the user key strokes (one of the USER STORIES)
-If the user does not enter a search count, the App returns the maximum of 30 images. 
-To get a decent layout for the images, I constrained the display to rows of six images on a large screen. 
-This means that when the user enters a search count value that is not a multiple of six, the App returns 
+If the user does not enter a search count, the App returns the maximum of 36 images (six rows of six images). 
+To get a decent layout for the images, I constrained the display to rows of six images (36 max) on a large screen. 
+This means that when the user enters a search count value that is not a multiple of six, you get (number entered % 6) rows of images
 
 
 
@@ -51,14 +51,11 @@ This means that when the user enters a search count value that is not a multiple
 Ideas for future improvement
 ============================
 
--	Implement a server authentication such that only paid users are allowed access 
-	to the detailed parts of the tutorials. When a user first gets to the site, 
-	the free sections of the tutorial will be available while the button / links 
-	to other sections are grayed out until the user is authenticated
--	Create several exercises that offers the user some multiple choice answers 
-	to test acquired skills 
--	Implement an automatic logout scheme that monitors for prolonged idle time.
-	This will log out any user who stays idle for a maximum period of time. 
+-	Implement output that displays additional image information (like rating ...) 
+	
+-	Screen keywords entered for indecent searches and display a warning to the user in a modal box!   
+	 
+
 
 
 User Stories
@@ -67,13 +64,13 @@ User Stories
 -   As a user, I would like to have the programmer provide a guide to what are the most common search keywords in the form of buttons.
     That will save me key strokes
 
--   I will also like to rurn as many images as possible without bothering to specify the count of images. Also it will be nice to have a feature that allows 
-    me to initiate the search by pressing the ENTER key
+-   I will also like to return just one row of 6 images when the user does not bother to specify the count of images. Also it will be nice to have a feature that allows 
+    me to initiate the search by pressing the ENTER key. Also pressing the ESC key wipes out entries in the search boxes
 
 -   Lastly, as a user, I would like to hide some of the menu items when I am using the app on a very small device and line up the social icons 
     in a row (rather than stack them) when on small devices
     
-
+ 
 
 
 
